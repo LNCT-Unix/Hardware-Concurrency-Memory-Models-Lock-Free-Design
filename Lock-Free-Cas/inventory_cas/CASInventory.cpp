@@ -10,7 +10,7 @@ public:
     Inventory(int s) {
         stock = s;
     }
-
+//Try to purchase one item safely while multiple threads are accessing the inventory
     bool buy() {
         int cur = stock.load();
         while (cur > 0) {

@@ -13,7 +13,7 @@ NOTE-> Any thread can perform first eg-> user 2 may found seat first
 
  */
 
-public class DataRaceDemo2 {
+public class IrctcExample {
 
     static int seat=1;
 

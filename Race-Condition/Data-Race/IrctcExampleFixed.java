@@ -13,7 +13,7 @@ NO seat available
 
 */
 
-public class DataRaceDemo2Fixed {
+public class IrctcExampleFixed {
     static int seat=1;
  
      // synchronized lock the current thread till one completes the task it prevent multiple threads working simultanously at a time

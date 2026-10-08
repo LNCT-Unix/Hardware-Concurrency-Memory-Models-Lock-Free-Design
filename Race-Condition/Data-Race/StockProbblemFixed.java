@@ -1,9 +1,9 @@
-// Product stock probblem when 1 product is available and multiple user tries to book it 
+// we execute and book the tickit in synchronized way until one thread/user finished booking
+//prevent two theads to work simultaneously . we lock current thread and unlock after task finished 
 
-public class DataRaceDemo1{
-
-    static int stock=1;
-    static  void buy(String customer){      //synchronised
+public class StockProbblemFixed {
+       static int stock=1;
+    static synchronized void buy(String customer){      
         if (stock>0){
 
             System.out.println(customer +" found the product");

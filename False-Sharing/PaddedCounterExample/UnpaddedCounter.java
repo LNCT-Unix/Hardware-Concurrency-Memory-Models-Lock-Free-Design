@@ -1,3 +1,4 @@
+package PaddedCounterExample;
 public class UnpaddedCounter {
 static class Counters {
         volatile long x = 0;

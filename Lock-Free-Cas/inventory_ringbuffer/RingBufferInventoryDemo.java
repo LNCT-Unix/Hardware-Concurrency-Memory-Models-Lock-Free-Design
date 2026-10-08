@@ -1,11 +1,14 @@
 package com.example.inventory.ringbuffer;
 
+import java.util.Scanner;
+
 public class RingBufferInventoryDemo {
     public static void main(String[] args) throws InterruptedException {
-        int initialStock = 100_000;
-        int threads = 8;
-        int purchasesPerThread = 15_000;
-        int ringBufferCapacity = 1024;
+        Scanner scanner = new Scanner(System.in);
+        int initialStock = readInt(scanner, "Initial stock: ");
+        int threads = readInt(scanner, "Threads: ");
+        int purchasesPerThread = readInt(scanner, "Purchases per thread: ");
+        int ringBufferCapacity = readInt(scanner, "Ring buffer capacity: ");
 
         long totalAttempts = (long) threads * purchasesPerThread;
         RingBuffer buffer = new RingBuffer(ringBufferCapacity);
@@ -74,5 +77,15 @@ public class RingBufferInventoryDemo {
         System.out.println("Expected stock: " + expectedStock);
         System.out.println();
         System.out.println("Correct: " + correct);
+    }
+
+    private static int readInt(Scanner scanner, String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextInt()) {
+            System.out.println("Please enter a valid integer.");
+            scanner.next();
+            System.out.print(prompt);
+        }
+        return scanner.nextInt();
     }
 }

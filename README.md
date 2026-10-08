@@ -3,7 +3,6 @@
 [![Java](https://img.shields.io/badge/Java-21%2B%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![Concurrency](https://img.shields.io/badge/Concurrency-Lock--Free%20%7C%20CAS-blue?style=for-the-badge)](https://en.wikipedia.org/wiki/Non-blocking_algorithm)
 [![Hardware](https://img.shields.io/badge/Hardware-Cache%20Coherence%20%7C%20MESI-brightgreen?style=for-the-badge)](https://en.wikipedia.org/wiki/False_sharing)
-[![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)](LICENSE)
 
 A hands-on, hardware-aware exploration of multi-core concurrency, low-level memory models, cache coherence protocols (MESI/MOESI), false sharing mitigation, and lock-free data structures using Compare-And-Swap (CAS) atomics.
 

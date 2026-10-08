@@ -21,7 +21,7 @@ class PizzaShop {
     }
 }
 
-public class Pizza {
+public class Main {
     public static void main(String[] args) throws InterruptedException {
         PizzaShop shop = new PizzaShop();
 

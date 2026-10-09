@@ -49,7 +49,7 @@ public static void main(String[] args) throws Exception{
             });
         }
 
-        
+        long startTime = System.nanoTime();
         for (Thread customer : customers) {
             customer.start();
         }
@@ -58,11 +58,15 @@ public static void main(String[] args) throws Exception{
         for (Thread customer : customers) {
             customer.join();
         }
+        long endTime = System.nanoTime();
+
+        long executionTimeNs = endTime - startTime;
 
         System.out.println("\n------------------------");
         System.out.println("Initial Stock : " + initialStock);
         System.out.println("Customers     : " + numberOfCustomers);
         System.out.println("Final Stock   : " + stock.get());
+        System.out.println("Execution Time: " + executionTimeNs + " ns");
         System.out.println("------------------------");
         sc.close();
 }
